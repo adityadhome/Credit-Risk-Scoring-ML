@@ -147,5 +147,5 @@ Contributions, issues, and feature requests are welcome! Feel free to open an is
 
 ## 👤 Author
 
-**Ashish**  
+**Aditya**  
 📧 [GitHub Profile](https://github.com/<your-username>)
