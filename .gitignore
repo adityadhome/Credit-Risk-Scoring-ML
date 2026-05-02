@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Large data files (too big for GitHub)
+loan.csv
+cs-training.csv
+
+# Model files (too large / can be regenerated)
+*.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary / helper scripts (not part of core project)
+append_cells.py
+update_cell.py
+download_kaggle.py
+create_presentation.py
