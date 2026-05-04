@@ -31,6 +31,11 @@ cs-training.csv
 Thumbs.db
 .DS_Store
 
+# Generated artifacts (recreated by running the notebook)
+roc_curve.png
+shap_bar.png
+feature_names.txt
+
 # Temporary / helper scripts (not part of core project)
 append_cells.py
 update_cell.py

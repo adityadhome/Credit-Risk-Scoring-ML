@@ -1,15 +1,14 @@
-# 💳 Credit Risk Scoring — Machine Learning Project
+# Credit Risk Scoring — Machine Learning Project
 
-A complete **end-to-end ML pipeline** for predicting loan defaults, built with Python and deployed as a FastAPI REST API.
+A complete **end-to-end ML pipeline** for predicting loan defaults, built with Python and Jupyter Notebook.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Latest-orange?logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Latest-green)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-teal?logo=fastapi&logoColor=white)
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project builds a credit-risk scoring model that predicts whether a borrower will default on a loan within the next two years. It uses the **"Give Me Some Credit"** dataset from Kaggle and covers:
 
@@ -19,28 +18,25 @@ This project builds a credit-risk scoring model that predicts whether a borrower
 - Training & comparing **Logistic Regression**, **Random Forest**, and **XGBoost**
 - Hyperparameter tuning
 - Model explainability with **SHAP**
-- Deployment via a **FastAPI** endpoint
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 ml-project/
 ├── Credit_Risk_Scoring_ML_Project.ipynb  # Full detailed notebook
 ├── Credit_Risk_Simple.ipynb              # Simplified / beginner-friendly version
-├── app.py                                # FastAPI prediction API
-├── feature_names.txt                     # Feature list used by the model
+├── cs-training.csv                       # Training dataset (required input)
 ├── requirements.txt                      # Python dependencies
-├── Credit_Risk_Scoring_Presentation.pptx # Project presentation
 └── README.md
 ```
 
-> **Note:** Large files like `cs-training.csv`, `loan.csv`, and `.pkl` model files are excluded from the repo. See [Dataset](#-dataset) below.
+> **Note:** Large files like `cs-training.csv` and `.pkl` model files are excluded from the repo. See [Dataset](#dataset) below.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -67,32 +63,24 @@ pip install -r requirements.txt
 
 ### 4. Download the dataset
 
-Download **"Give Me Some Credit"** from Kaggle:  
-🔗 <https://www.kaggle.com/c/GiveMeSomeCredit/data>
+Download **"Give Me Some Credit"** from Kaggle:
+<https://www.kaggle.com/c/GiveMeSomeCredit/data>
 
 Place `cs-training.csv` in the project root directory.
 
 ### 5. Run the notebook
 
-Open Jupyter and run `Credit_Risk_Scoring_ML_Project.ipynb` (or `Credit_Risk_Simple.ipynb` for a simpler walkthrough).
-
 ```bash
 jupyter notebook
 ```
 
-### 6. Start the API server
+Open `Credit_Risk_Scoring_ML_Project.ipynb` for the full walkthrough, or `Credit_Risk_Simple.ipynb` for a beginner-friendly version.
 
-After running the notebook (which saves `credit_risk_model.pkl` and `credit_scaler.pkl`):
-
-```bash
-uvicorn app:app --reload
-```
-
-Visit the interactive docs at **http://localhost:8000/docs**.
+Running the notebook will generate `roc_curve.png`, `shap_bar.png`, and the trained model `.pkl` files in the project directory.
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Dataset | Source |
 |---------|--------|
@@ -102,7 +90,7 @@ The dataset contains **150,000 rows** and **11 features** including income, debt
 
 ---
 
-## 🧠 Models & Results
+## Models & Results
 
 | Model | ROC-AUC |
 |-------|---------|
@@ -114,13 +102,13 @@ The final model is **XGBoost** with hyperparameter tuning and SMOTEENN resamplin
 
 ---
 
-## 🔍 Model Explainability
+## Model Explainability
 
 SHAP (SHapley Additive exPlanations) is used to explain individual predictions and understand global feature importance.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.9+**
 - **pandas**, **NumPy** — data processing
@@ -129,23 +117,16 @@ SHAP (SHapley Additive exPlanations) is used to explain individual predictions a
 - **imbalanced-learn** — SMOTEENN resampling
 - **SHAP** — model explainability
 - **matplotlib**, **seaborn** — visualization
-- **FastAPI** — REST API deployment
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🤝 Contributing
+## Author
 
-Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
-
----
-
-## 👤 Author
-
-**Aditya**  
-📧 [GitHub Profile](https://github.com/<your-username>)
+**Aditya**
+[GitHub Profile](https://github.com/<your-username>)
